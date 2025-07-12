@@ -1,7 +1,7 @@
 import "./App.css";
 import { MovieProvider } from "./contexts/MovieProvider";
 import { Body } from "./components/Body/Body";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import { MovieDetails } from "./components/MovieDetails/MovieDetails";
 import LABEL from "./constants/Labels";
 import { PageButton } from "./components/Pagination/PaginationStyles";
@@ -10,6 +10,7 @@ function App() {
   return (
     <MovieProvider>
       <Routes>
+        <Route path="/" element={<Navigate to="/movies/1" />} />
         <Route path="/movies/:page?" element={<Body />} />
         <Route path="/movie-details/:movieId" element={<MovieDetails />} />
         <Route
