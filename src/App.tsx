@@ -10,7 +10,7 @@ function App() {
   return (
     <MovieProvider>
       <Routes>
-        <Route path="/" element={<Navigate to="/movies/1" />} />
+        <Route path="/movie-search/" element={<Navigate to="/movies/1" />} />
         <Route path="/movies/:page?" element={<Body />} />
         <Route path="/movie-details/:movieId" element={<MovieDetails />} />
         <Route
