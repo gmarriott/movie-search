@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  base: '/movies/1',
+  base: '/movie-search/',
   plugins: [react()],
   resolve: {
     alias: {
